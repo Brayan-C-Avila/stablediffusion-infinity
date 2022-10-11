@@ -114,7 +114,7 @@ def save_token(token):
 
 
 class StableDiffusion:
-    def __init__(self, token="", model_name="CompVis/stable-diffusion-v1-4"):
+    def __init__(self, token="", model_name="sd-dreambooth-library/thebrayan"):
         self.token = token
         if device == "cuda":
             text2img = StableDiffusionPipeline.from_pretrained(

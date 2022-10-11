@@ -117,10 +117,11 @@ class StableDiffusion:
     def __init__(self, token="", model_name="sd-dreambooth-library/thebrayan"):
         self.token = token
         if device == "cuda":
-            text2img = StableDiffusionPipeline.from_pretrained(
+            #DiffusionPipeline.from_pretrained("sd-dreambooth-library/thebrayan", use_auth_token=True)
+            text2img = DiffusionPipeline.from_pretrained(
                 model_name,
-                revision="fp16",
-                torch_dtype=torch.float16,
+                #revision="fp16",
+                #torch_dtype=torch.float16,
                 use_auth_token=token,
             ).to(device)
         else:

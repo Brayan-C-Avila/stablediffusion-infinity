@@ -7,6 +7,7 @@ import numpy as np
 import torch
 from torch import autocast
 import diffusers
+from diffusers import DiffusionPipeline
 from diffusers import StableDiffusionPipeline, StableDiffusionInpaintPipeline
 from PIL import Image
 from PIL import ImageOps
